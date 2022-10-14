@@ -22,7 +22,8 @@ class Main {
     System.out.println("3. Y-Intercept");
     System.out.println("4. Value");
     System.out.println("5. X-Intercepts");
-    System.out.println("6. Convert Form");
+    System.out.println("6. All of the above");
+    System.out.println("7. Convert Form");
     int choice = input.nextInt();
 
     if(choice == 1) {
@@ -35,7 +36,13 @@ class Main {
       equation1.solveValue();
     }else if (choice == 5){
       equation1.solveXInt();
-    }else if (choice == 6){
+    }else if (choice ==6){
+      equation1.solveVertex();
+      equation1.solveMaxMin();
+      equation1.solveYInt();
+      equation1.solveValue();
+      equation1.solveXInt();
+    }else if (choice == 7){
       System.out.println("You are currently in vertex form, choose what you would like to convert to: \n 1. Standard \n 2. Intercept");
       int formConvChoose = input.nextInt();
       if(formConvChoose == 1){
