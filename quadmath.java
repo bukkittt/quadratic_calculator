@@ -15,23 +15,23 @@ class quadmath {
   } 
 
   public void solveVertex(){
-     System.out.println("("+ h + "," + k + ")");
+     System.out.println("The vertex is: " + "("+ h + "," + k + ")");
   }
   
   public void solveMaxMin(){
-    System.out.println("y = " + k);
+    System.out.println("The max/min is y = " + k);
   }
   
   public void solveYInt(){
     double yInt = a * Math.pow((b * (0 + h)), 2) + k;
-    System.out.println("(0.0," + yInt + ")");
+    System.out.println("The Y-Intercept is (0.0," + yInt + ")");
   }
   
   public void solveValue(){
     System.out.println("Enter X: ");
     int valueX = input.nextInt();
     System.out.println();
-    System.out.println("Y is equal to: " + (a * Math.pow((b * (valueX + h)), 2) + k));
+    System.out.println("Y(" + valueX + ") is equal to: " + (a * Math.pow((b * (valueX + h)), 2) + k));
   }
   public void solveXInt(){
     double d = ((a*h*2) * (a*h*2))-4*a*(a*h*h+k);
