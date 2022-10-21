@@ -14,7 +14,7 @@ class Main {
     double input3 = input.nextInt();
     double input4 = input.nextInt();
     //Create a new equation
-    quadmath equation1  = new quadmath(input1, input2, input3, input4);
+    Quadmath equation  = new Quadmath(input1, input2, input3, input4);
     //Ask what user wants to solve
     System.out.println("Thank you, choose what you would like to solve for:");
     System.out.println("1. Vertex");
@@ -27,37 +27,81 @@ class Main {
     int choice = input.nextInt();
 
     if(choice == 1) {
-      equation1.solveVertex();
+      equation.solveVertexAsVertex();
     }else if(choice == 2){
-      equation1.solveMaxMin();
+      equation.solveMaxMinAsVertex();
     }else if(choice == 3){
-      equation1.solveYInt();
+      equation.solveYIntAsVertex();
     }else if(choice == 4){
-      equation1.solveValue();
+      equation.solveValueAsVertex();
     }else if (choice == 5){
-      equation1.solveXInt();
+      equation.solveXIntAsVertex();
     }else if (choice ==6){
-      equation1.solveVertex();
-      equation1.solveMaxMin();
-      equation1.solveYInt();
-      equation1.solveValue();
-      equation1.solveXInt();
+      equation.solveVertexAsVertex();
+      equation.solveMaxMinAsVertex();
+      equation.solveYIntAsVertex();
+      equation.solveValueAsVertex();
+      equation.solveXIntAsVertex();
     }else if (choice == 7){
       System.out.println("You are currently in vertex form, choose what you would like to convert to: \n 1. Standard \n 2. Intercept");
       int formConvChoose = input.nextInt();
       if(formConvChoose == 1){
-        equation1.vertexToStandard();
+        equation.vertexToStandard();
       }else if(formConvChoose == 2){
-        equation1.vertexToIntercept();
+        equation.vertexToIntercept();
       }else{
         System.out.println("Invalid Option");
       }
     }else{
       System.out.println("Invalid Option");
     }
-    }else if (formChoice == 2){
-      
-    }else if (formChoice == 3){
+    }
+    
+    //STANDARD FORM
+
+    else if (formChoice == 2){
+      //First ask for a, b, c
+    System.out.println("Please enter the a, b, and k values in the order they are written in.");
+    double input1 = input.nextInt();
+    double input2 = input.nextInt();
+    double input3 = input.nextInt();
+    //Create an equation
+    Quadmath equation = new Quadmath(input1, input2, input3);
+    //Ask what user wants to solve
+    System.out.println("Thank you, choose what you would like to solve for:");
+    System.out.println("1. Vertex");
+    System.out.println("2. Max/Min");
+    System.out.println("3. Y-Intercept");
+    System.out.println("4. Value");
+    System.out.println("5. X-Intercepts");
+    System.out.println("6. All of the above");
+    System.out.println("7. Convert Form");
+    int choice = input.nextInt();
+    if(choice == 1){
+      equation.solveVertexAsStandard();
+    }else if(choice == 2){
+      equation.solveMaxMinAsStandard();
+    }else if(choice == 3){
+      equation.solveYIntAsStandard();
+    }else if(choice == 4){
+      equation.solveValueAsStandard();
+    }else if(choice == 5){
+      equation.solveXIntAsStandard();
+    }else if(choice == 6){
+      equation.solveVertexAsStandard();
+      equation.solveMaxMinAsVertex();
+      equation.solveYIntAsVertex();
+      equation.solveValueAsStandard();
+      equation.solveXIntAsStandard();
+    }else if(choice == 7){
+
+    }
+  
+  }
+  
+  //INTERCEPT FORM!
+
+  else if (formChoice == 3){
       
     }else {
       System.out.println("Invalid Option");
