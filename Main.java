@@ -61,7 +61,7 @@ class Main {
 
     else if (formChoice == 2){
       //First ask for a, b, c
-    System.out.println("Please enter the a, b, and k values in the order they are written in.");
+    System.out.println("Please enter the a, b, and c values in the order they are written in.");
     double input1 = input.nextInt();
     double input2 = input.nextInt();
     double input3 = input.nextInt();
@@ -93,8 +93,15 @@ class Main {
       equation.solveYIntAsVertex();
       equation.solveValueAsStandard();
       equation.solveXIntAsStandard();
-    }else if(choice == 7){
-
+    }else if(choice == 7){  
+      System.out.println("You are currently in Standard form; Choose what form you would like to convert to: \n 1. Vertex \n 2. Intercept");
+      int formConvChoose = input.nextInt();
+      if(formConvChoose == 1 ){
+        //convert to vertex form
+        
+      }else if(formConvChoose == 2){
+        //convert to intercept form
+      }
     }
   
   }
