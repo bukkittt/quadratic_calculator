@@ -52,7 +52,7 @@ class Quadmath {
   public void solveValueAsStandard(){
     System.out.println("Enter X: ");
     double valueX = input.nextDouble();
-    System.out.println("Y is equal to: " + Math.pow(a*valueX, 2) + (b*valueX) + (c));
+    System.out.println("Y is equal to: " + (Math.pow(a*valueX, 2) + (b*valueX) + c));
   }
   public void solveXIntAsVertex(){
     double d = ((a*h*2) * (a*h*2))-4*a*(a*h*h+k);
@@ -95,7 +95,25 @@ class Quadmath {
       System.out.println("The equation in intercept form is " + a + "(X+" + (-(a*h*2)+Math.sqrt(d)/(2*a)) + ")(X)");
     } else if(d > 0){
       System.out.println("The equation in intercept form is " + a + "(X + " + (-(a*h*2)+Math.sqrt(d)/(2*a)) + ")(X + " + (-(a*h*2)-Math.sqrt(d)/(2*a)) + ")");
+    }}
+public void standardToVertex(){
+  if(a != 1){
+    
+  }else{
+    double blankOne = Math.pow(b/2, 2);
+    double blankTwo = blankOne * -1;
+    String sign;
+    if((b*-1) == b){
+      sign = "-";
+    }else if((b*-1) == (b*-1)){
+      sign = "+";
     }
+     System.out.println("The equation in vertex form is: (x" + sign + Math.sqrt(blankOne)+")^2 +" + blankTwo);
+      
+   
+   
+}
+          
     
   }
 }
